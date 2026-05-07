@@ -1,0 +1,50 @@
+{
+  // VS Code 디버그 설정 파일의 버전입니다. 보통 그대로 두면 됩니다.
+  "version": "0.2.0",
+
+  // 실행 가능한 디버그 설정 목록입니다.
+  "configurations": [
+    {
+      // VS Code의 Run and Debug 메뉴에 표시되는 이름입니다.
+      "name": "Debug current Python file - integrated terminal",
+
+      // Python 디버거(debugpy)를 사용하겠다는 뜻입니다.
+      "type": "debugpy",
+
+      // 새 Python 프로그램을 실행하면서 디버깅합니다.
+      "request": "launch",
+
+      // 현재 VS Code에서 열려 있는 파일을 실행합니다.
+      // 예: CODEUP/greedy/3120.py를 열고 F5를 누르면 그 파일이 실행됩니다.
+      "program": "${file}",
+
+      // input()을 사용하는 알고리즘 문제를 위해 VS Code 아래쪽 터미널에서 실행합니다.
+      // 디버깅 중 입력값은 이 터미널에 직접 입력하면 됩니다.
+      "console": "integratedTerminal",
+
+      // 내가 작성한 코드 위주로 디버깅합니다.
+      // Python 내부 라이브러리 코드까지 깊게 들어가지 않게 해줍니다.
+      "justMyCode": true
+    },
+    {
+      // 통합 터미널에서 입력한 글자가 보이지 않을 때 사용하는 설정입니다.
+      // 별도의 터미널 창이 열리기 때문에 input() 입력값이 보이는지 확인하기 쉽습니다.
+      "name": "Debug current Python file - external terminal",
+
+      // Python 디버거(debugpy)를 사용하겠다는 뜻입니다.
+      "type": "debugpy",
+
+      // 새 Python 프로그램을 실행하면서 디버깅합니다.
+      "request": "launch",
+
+      // 현재 VS Code에서 열려 있는 파일을 실행합니다.
+      "program": "${file}",
+
+      // VS Code 내부 터미널 대신 별도 터미널 창에서 실행합니다.
+      "console": "externalTerminal",
+
+      // 내가 작성한 코드 위주로 디버깅합니다.
+      "justMyCode": true
+    }
+  ]
+}
