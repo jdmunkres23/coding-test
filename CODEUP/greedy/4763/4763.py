@@ -10,6 +10,12 @@ if os.path.exists(input_path):
 
 n = int(input())
 hate = [0]
+table = [0]
 for _ in range(n):
     hate.append(list(set(map(int,input()))))
 
+def check(x):
+    for i in hate[x]:
+        for j in hate[i]:
+            if table[j]:
+                pass
